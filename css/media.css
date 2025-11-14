@@ -1,0 +1,310 @@
+@media (max-width: 769px) {
+	.burger {
+		display: flex;
+		position: fixed;
+		top: 15px;
+		right: 15px;
+		width: 30px;
+		height: 22px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		cursor: pointer;
+		z-index: 2000;
+	}
+	.burger span {
+		display: block;
+		height: 3px;
+		background: white;
+		border-radius: 2px;
+		transition: 0.3s;
+	}
+
+	.nav__list {
+		display: none;
+	}
+
+	.burger.active + .nav__list {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.nav__list {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background: var(--color-accent-1);
+		transform: translateX(100%);
+		transition: 0.3s ease;
+
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 25px;
+		z-index: 1000;
+	}
+
+	.nav__list.active {
+		transform: translateX(0);
+	}
+
+	.menu__link {
+		margin-left: 20px;
+		color: white;
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 30px;
+		letter-spacing: 0%;
+		text-transform: uppercase;
+	}
+
+	.header__box-buttons {
+		display: flex;
+		gap: 15px;
+		margin-top: 480px;
+		margin-right: 150px;
+		width: 200px;
+		text-align: center;
+		border-radius: 6px;
+		font-size: 18px;
+		font-weight: 600;
+		z-index: 1000;
+	}
+
+	.header__button-left {
+		border: 2px solid #00e7ff;
+		color: #00e7ff;
+	}
+
+	.header__button-right {
+		border: 2px solid #4192ff;
+		color: #4192ff;
+	}
+
+	.intro__inner {
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+	}
+
+	.intro__left-title {
+		font-size: 35px;
+	}
+
+	.profit-metrics__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+
+	.profit__title-box {
+		margin-left: 30px;
+	}
+
+	.profit__results {
+		margin-top: 0px;
+		padding-left: 30px;
+	}
+
+	.about-section__inner {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.tariffs__cards {
+		flex-wrap: wrap;
+	}
+	.container.footer {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.container.footer {
+		flex-direction: column;
+	}
+	.footer__left {
+		order: 1;
+		gap: 50px;
+		flex-direction: row;
+		padding: 50px;
+	}
+
+	.footer__left-menu {
+		flex-direction: column;
+		gap: 35px;
+		margin: 0;
+	}
+
+	.footer__left-title {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	.footer__right {
+		order: 2;
+		align-items: flex-start;
+		margin: 0;
+	}
+
+	.footer__logo {
+		width: 165px;
+		margin-top: 0;
+		margin-right: 0;
+	}
+
+	.footer__license {
+		padding-left: 0;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+	.header__inner {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+	.header__logo {
+		order: 1;
+	}
+
+	.header__box-buttons {
+		order: 2;
+	}
+
+	.header__nav {
+		order: 3;
+		flex: 1 1 100%;
+		max-width: none;
+		max-height: none;
+	}
+
+	.nav__list {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 16px;
+	}
+
+	.intro__inner {
+		flex-direction: column-reverse;
+		flex-wrap: wrap;
+	}
+
+	.intro__left-title {
+		font-size: 35px;
+	}
+	.profit-metrics__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+	.profit__results {
+		margin-top: 35px;
+		padding-left: 40px;
+	}
+
+	.about-section__inner {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.tariffs__cards {
+		flex-wrap: wrap;
+	}
+	.container.footer {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.container.footer {
+		flex-direction: column;
+	}
+	.footer__left {
+		order: 1;
+		gap: 50px;
+		flex-direction: row;
+		padding: 50px;
+	}
+
+	.footer__left-menu {
+		flex-direction: column;
+		gap: 35px;
+		margin: 0;
+	}
+
+	.footer__left-title {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.footer__right {
+		order: 2;
+		align-items: flex-start;
+		margin: 0;
+	}
+
+	.footer__logo {
+		margin-top: 0;
+		margin-right: 0;
+	}
+
+	.footer__license {
+		padding-left: 0;
+		margin-bottom: 20px;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+	.header__inner {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.nav__list {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.header__logo {
+		order: 1;
+	}
+
+	.header__box-buttons {
+		order: 2;
+	}
+
+	.header__nav {
+		order: 3;
+		flex: 1 1 100%;
+		max-width: none;
+		max-height: none;
+	}
+
+	.profit-metrics__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 50px;
+	}
+
+	.profit__results {
+		margin-top: 35px;
+		padding-left: 40px;
+	}
+
+	.about-section__inner {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.tariffs__cards {
+		flex-wrap: wrap;
+	}
+}

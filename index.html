@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Test project</title>
+		<link rel="stylesheet" href="./css/reset.css" />
+		<link rel="stylesheet" href="./fonts/fonts.css" />
+		<link rel="stylesheet" href="./css/styles.css" />
+		<link rel="stylesheet" href="./css/media.css" />
+
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+	</head>
+	<body>
+		<div class="wrapper">
+			<header class="header section--dark">
+				<div class="container">
+					<div class="header__inner">
+						<div class="header__logo">
+							<div class="logo">
+								<img src="./images/logo.svg" alt="logo" />
+							</div>
+						</div>
+
+						<nav class="header__nav">
+							<div class="burger">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div>
+
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="#" class="menu__link">Цифры</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">Сделки онлайн</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">о компании</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">как начать</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">тарифы</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">отзывы</a>
+								</li>
+								<li class="nav__item">
+									<a href="#" class="menu__link">FAQ</a>
+								</li>
+							</ul>
+						</nav>
+
+						<div class="header__box-buttons">
+							<button class="button header__button-left">вход</button>
+
+							<button class="button header__button-right">регистрация</button>
+						</div>
+					</div>
+				</div>
+			</header>
+
+			<main class="main">
+				<section class="intro section section--dark">
+					<div class="container">
+						<div class="intro__inner">
+							<div class="intro__left">
+								<h1 class="intro__left-title">
+									моментально Копируй сделки профи трейдеров
+								</h1>
+
+								<div class="intro__left-subtitle">
+									Начни копировать сделки с успешной командой профессиональных
+									трейдеров в автоматическом режиме.
+								</div>
+
+								<form class="emailSignup__block">
+									<input
+										class="emailSignup__input"
+										type="email"
+										placeholder="ВАШ E-MAIL"
+										required
+									/>
+									<button class="emailSignup__button" type="submit">
+										НАЧАТЬ
+									</button>
+								</form>
+								<p class="intro__note">5 дней бесплатного пользования</p>
+							</div>
+
+							<div class="intro__right">
+								<div class="intro__right-image">
+									<img src="./images/intro.svg" alt="image-intro" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="diagonal-split-block">
+					<div class="split-left"></div>
+					<div class="split-right"></div>
+				</section>
+
+				<section class="profit section section--light">
+					<div class="container">
+						<div class="profit-metrics__inner">
+							<div class="profit__title-box">
+								<h2 class="profit__title">Цифры</h2>
+								<p class="profit__subtitle">Cентябрь 2022</p>
+							</div>
+
+							<div class="profit__results-box">
+								<div class="profit__results">
+									<div class="profit__results-title">Торговой прибыли</div>
+									<div class="profit__results__subtitle">2756%</div>
+								</div>
+
+								<div class="profit__results">
+									<div class="profit__results-title">
+										фьючерсных и спотовых сделок
+									</div>
+									<div class="profit__results__subtitle">67</div>
+								</div>
+
+								<div class="profit__results">
+									<div class="profit__results-title">прибыль подписчиков</div>
+									<div class="profit__results__subtitle">375000</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="section-trades section--dark">
+					<div class="container">
+						<h2 class="section-trades__title">Прошедшие сделки</h2>
+
+						<div class="section-trades__status">
+							<span class="section-trades__dot">●</span>
+							<span class="section-trades__subtitle">Онлайн</span>
+						</div>
+
+						<div class="trades-scroll-container" id="tradesScroll">
+							<div class="trade-cards-wrapper">
+								<div class="trade-card">
+									<div class="card-header">NEAR/USDT</div>
+									<div class="card-header-text">SPOT · 1 мин. назад</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain"
+											>58.6206% <span class="profit__arrow">↑</span></span
+										>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">BTC/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">6.02%%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 3</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">ETH/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">16.3%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">NEAR/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">0.963%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">NEAR/USDT</div>
+
+									<div class="card-header-text">SPOT · 1 мин. назад</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain"
+											>58.6206% <span class="profit__arrow">↑</span></span
+										>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">BTC/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">6.02%%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 3</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">ETH/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">16.3%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+
+								<div class="trade-card">
+									<div class="card-header">NEAR/USDT</div>
+
+									<div class="card-stats">
+										<span class="stat-label">ПРИБЫЛЬ</span>
+										<span class="stat-value gain">0.963%</span>
+									</div>
+
+									<div class="card-footer">
+										<span class="footer-item">Цель 4</span>
+										<span class="footer-item">Дата входа 06.10.2022</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="track-wrap">
+							<input
+								id="trackRange"
+								class="track"
+								type="range"
+								min="0"
+								max="100"
+								value="0"
+								step="0.1"
+							/>
+							<div class="track-info" id="trackInfo">0%</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="diagonal-split-block">
+					<div class="split-left"></div>
+					<div class="split-right"></div>
+				</section>
+
+				<section class="about section section--light">
+					<div class="container">
+						<div class="about-section__inner">
+							<div class="about-section__left">
+								<h2 class="section__left-title">О компании</h2>
+
+								<p class="section__left-subtitle">
+									Мы опытная команда, для которой трейдинг – профессия. TradeBlade
+									является авторизованным официальным брокером биржи Binance.
+								</p>
+
+								<p class="section__left-subtitle">
+									Он представляет пользователям множество преимуществ, таких как
+									более високая скорость синхронизации API и возможность создать
+									учетную запись Binance через платформу TradeBlade всего в 1
+									клик.
+								</p>
+							</div>
+
+							<div class="about-section__right">
+								<h3 class="about-section__title">
+									Попробуйте сейчас и получите <br />
+									5 дней бесплатного пользования
+								</h3>
+
+								<form class="emailSignup__block-about">
+									<input
+										class="emailSignup__input about"
+										type="email"
+										placeholder="ВАШ E-MAIL"
+										required
+									/>
+
+									<button class="emailSignup__button about" type="submit">
+										попробовать
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="tradeblade section section--dark">
+					<div class="container">
+						<div class="tradeblade__inner">
+							<h2 class="tradeblade__title">tradeblade это</h2>
+
+							<ul class="tradeblade__items">
+								<li class="tradeblade__item">
+									<div class="tradeblade__image">
+										<img src="./images/about_4.svg" alt="image" />
+									</div>
+
+									<div class="tradeblade__card">
+										<h4 class="tradebla__title">Копи–трейдинг 24/7</h4>
+
+										<div class="tradebla__subtitle">
+											Copy–Trading позволяет следить за сделками команды и
+											получать прибыль 24/7 без каких–либо усилий или проблем
+											для вас.
+										</div>
+									</div>
+								</li>
+
+								<li class="tradeblade__item">
+									<div class="tradeblade__image">
+										<img src="./images/about_1.svg" alt="image" />
+									</div>
+
+									<div class="tradeblade__card">
+										<h4 class="tradebla__title">
+											Торговля спотовыми и фьючерсными сделками
+										</h4>
+
+										<div class="tradebla__subtitle">
+											Платформа для копи–трейдинга поддерживает торговлю как
+											спотовыми, так и фьючерсными сделками на Binance.
+										</div>
+									</div>
+								</li>
+
+								<li class="tradeblade__item">
+									<div class="tradeblade__image">
+										<img src="./images/about_3.svg" alt="image" />
+									</div>
+
+									<div class="tradeblade__card">
+										<h4 class="tradebla__title">Высокая прибыль каждий день</h4>
+
+										<div class="tradebla__subtitle">
+											Каждая сделка показывает хорошие результаты на рынках за
+											счет хорошего денежного и риск менеджмента.
+										</div>
+									</div>
+								</li>
+
+								<li class="tradeblade__item">
+									<div class="tradeblade__image">
+										<img src="./images/about.svg" alt="image" />
+									</div>
+
+									<div class="tradeblade__card">
+										<h4 class="tradebla__title">
+											Собственный курс по трейдингу
+										</h4>
+
+										<div class="tradebla__subtitle">
+											Мы хотим менять комьюнити, улучшать его. В личном
+											кабинете на сайте вы найдете наш собственный курс по
+											криптовалютам, который поможет увереннее понимать наши
+											сигналы и разрабатывать свои.
+										</div>
+									</div>
+								</li>
+
+								<li class="tradeblade__item">
+									<div class="tradeblade__image">
+										<img src="./images/about_2.svg" alt="image" />
+									</div>
+
+									<div class="tradeblade__card">
+										<h4 class="tradebla__title">Сильное окружение</h4>
+
+										<div class="tradebla__subtitle">
+											Ты попадаешь в сильное крипто окружение, ведь
+											развиваться легче когда нас много. В чате присутствуют
+											люди из нашей команды, которые общаються со всеми,
+											помагают и подсказывают.
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<section class="diagonal-split-block start">
+					<div class="split-left start"></div>
+					<div class="split-right start"></div>
+				</section>
+
+				<section class="start section section--purple">
+					<div class="container">
+						<div class="start__inner">
+							<h2 class="start__title">Как начать пользоваться сервисом</h2>
+
+							<div class="start__box-inner">
+								<div class="start__box">
+									<div class="start__box-title">Создайте аккаунт</div>
+
+									<div class="start__box-subtitle">
+										Начните бесплатную 3-дневную пробную версию. Кредитная карта
+										не требуется.
+									</div>
+								</div>
+
+								<div class="start__box">
+									<div class="start__box-title">Подключить обмен API ключами</div>
+
+									<div class="start__box-subtitle">
+										Просто вставьте свои ключи API из личного кабинета.
+									</div>
+								</div>
+
+								<div class="start__box">
+									<div class="start__box-title">Настройте аккаунт</div>
+
+									<div class="start__box-subtitle">
+										Поставьте нужные настройки депозита на каждый сигнал и
+										нажмите сохранить.
+									</div>
+								</div>
+
+								<div class="start__box">
+									<div class="start__box-title">Ваш копитрейдер запущен</div>
+
+									<div class="start__box-subtitle">
+										Просто расслабьтесь и начните получать пассивный доход от
+										криптовалюты с помощью TradeBlade
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="start__box-button">Попробовать бесплатно</div>
+					</div>
+				</section>
+
+				<section class="tariffs section section--dark">
+					<div class="container tariffs">
+						<h3 class="tariffs__title">тарифы</h3>
+
+						<div class="tariffs__toggler">
+							<input type="radio" id="option-a" name="selection-group" checked />
+							<label for="option-a">СПОТ</label>
+
+							<input type="radio" id="option-b" name="selection-group" />
+							<label for="option-b">фьючерс</label>
+						</div>
+
+						<div class="tariffs__cards">
+							<div class="tariffs__card" data-type="standart">
+								<h3 class="tariff__title">STANDART</h3>
+
+								<ul class="tariff__features">
+									<li class="tariff__item">Ручной трейдинг</li>
+									<li class="tariff__item">
+										Автоматическое или полуавтоматическое копирование сделок
+									</li>
+									<li class="tariff__item">Личный кабинет со статистикой</li>
+									<li class="tariff__item">
+										Среднесрочные сделки с уровнями набора портфеля
+									</li>
+								</ul>
+
+								<div class="tariff__price">
+									<span class="tariff__amount">$234</span>
+									<span class="tariff__discount">-35%</span>
+									<span class="tariff__duration">12 месяцев</span>
+								</div>
+
+								<button class="tariff__cta">
+									ПОПРОБОВАТЬ<br /><span>5 дней бесплатно</span>
+								</button>
+							</div>
+
+							<div class="tariffs__card active" data-type="vip">
+								<h3 class="tariff__title">VIP</h3>
+
+								<ul class="tariff__features">
+									<li class="tariff__item">Ручной трейдинг</li>
+									<li class="tariff__item">
+										Автоматическое или полуавтоматическое копирование сделок
+									</li>
+									<li class="tariff__item">Личный кабинет со статистикой</li>
+									<li class="tariff__item">
+										Краткосрочные, среднесрочные и инвест сделки
+									</li>
+									<li class="tariff__item">Доступ в Vip чат с командой</li>
+									<li class="tariff__item">Наш авторский курс по трейдингу</li>
+								</ul>
+
+								<div class="tariff__price">
+									<span class="tariff__amount">$585</span>
+									<span class="tariff__discount">-35%</span>
+									<span class="tariff__duration">12 месяцев</span>
+								</div>
+
+								<button class="tariff__cta">
+									ПОПРОБОВАТЬ<br /><span>5 дней бесплатно</span>
+								</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<section class="questions section section--light">
+					<div class="container questions">
+						<h3 class="questions__title">часто задаваемые вопросы</h3>
+
+						<ul class="questions__list">
+							<li class="question">
+								<button class="question__btn active">Что такое TradeBlade</button>
+
+								<div class="question__answer">
+									<p>
+										Мы опытная команда, для которой трейдинг – профессия.
+										TradeBlade является авторизованным официальным брокером
+										биржи Binance.
+									</p>
+
+									<p>
+										Он представляет пользователям множество преимуществ, таких
+										как более високая скорость синхронизации API и возможность
+										создать учетную запись Binance через платформу TradeBlade
+										всего в 1 клик.
+									</p>
+								</div>
+							</li>
+
+							<li class="question">
+								<button class="question__btn">
+									Что TradeBlade предлагает инвесторам
+								</button>
+
+								<div class="question__answer">
+									<p>
+										Мы опытная команда, для которой трейдинг – профессия.
+										TradeBlade является авторизованным официальным брокером
+										биржи Binance.
+									</p>
+
+									<p>
+										Он представляет пользователям множество преимуществ, таких
+										как более високая скорость синхронизации API и возможность
+										создать учетную запись Binance через платформу TradeBlade
+										всего в 1 клик.
+									</p>
+								</div>
+							</li>
+
+							<li class="question">
+								<button class="question__btn">
+									Должен ли я перевести свои средства на TradeBlade
+								</button>
+
+								<div class="question__answer">
+									<p>
+										Мы опытная команда, для которой трейдинг – профессия.
+										TradeBlade является авторизованным официальным брокером
+										биржи Binance.
+									</p>
+
+									<p>
+										Он представляет пользователям множество преимуществ, таких
+										как более високая скорость синхронизации API и возможность
+										создать учетную запись Binance через платформу TradeBlade
+										всего в 1 клик.
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div class="container footer">
+					<div class="footer__left">
+						<h4 class="footer__left-title">Быстрая навигация</h4>
+
+						<ul class="footer__left-menu">
+							<li><a href="#" class="footer__link">Цифры</a></li>
+
+							<li><a href="#" class="footer__link">Сделки онлайн</a></li>
+
+							<li><a href="#" class="footer__link">о компании</a></li>
+
+							<li><a href="#" class="footer__link">tradeblad это</a></li>
+
+							<li><a href="#" class="footer__link">тарифы</a></li>
+
+							<li><a href="#" class="footer__link">FAQ</a></li>
+						</ul>
+					</div>
+
+					<div class="footer__right">
+						<div class="footer__logo">
+							<img src="./images/logo.svg" />
+						</div>
+
+						<div class="footer__license">© 2022 TradeBlade. All rights reserved</div>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<script src="./js/main.js"></script>
+	</body>
+</html>
